@@ -1,0 +1,24 @@
+body {
+    background-color: #B3CFDD;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+#title {
+    font-size: 50px;
+    padding: 20px;
+}
+
+#image-container {
+    padding: 10px;
+    padding-bottom: 0px;
+    background-color: #fff;
+}
+
+#image-name {
+    margin-top: 12px;
+    padding-bottom: 10px;
+}
