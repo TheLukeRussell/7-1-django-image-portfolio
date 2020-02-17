@@ -7,6 +7,7 @@
     <title>Portfolio</title>
 
     {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
@@ -14,15 +15,19 @@
 
 <body>
     <div class="container-fluid">
-        <h1 id='title'>Portfolio</h1>
+        <h1 id='title'><u>Portfolio</u></h1>
+        <div class="carousel slide">
+        <div class="carousel-inner">
         {% for image in object_list %}
-        <div class="col-6 offset-3" id="image-container">
+        <div class="col-6 offset-3 item{% if forloop.first %} active{% endif %}" id="image-container">
             <img src="{{ image.cover.url }}" alt="{{ image.title }}">
-            <p id="image-name">{{ image.title }}</p>
+            <p class='carousel-caption capt' id="image-name">{{ image.title }}</p>
         </div>
         <br>
         {% endfor %}
+        </div>
     </div>
+        </div>
 </body>
 
 </html>
